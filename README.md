@@ -40,7 +40,7 @@
     <br>
 </div>
 
-<script>
+
 body {
   font-family: sans-serif;
   color: red;
@@ -73,4 +73,4 @@ a:visited {
 a:hover {
   text-decoration: none;
 }
-<script>
+
