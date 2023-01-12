@@ -53,39 +53,50 @@
 
 
 <script>
-body {
-  font-family: sans-serif;
-  color: red;
+var imageLoader = document.getElementById('imageLoader');
+    imageLoader.addEventListener('change', handleImage, false);
+var canvas = document.getElementById('imageCanvas');
+var ctx = canvas.getContext('2d');
+
+
+function handleImage(e){
+    var reader = new FileReader();
+    reader.onload = function(event){
+        var img = new Image();
+        img.onload = function(){
+            canvas.width = img.width: 250;
+            canvas.height = img.height: 250;
+            ctx.drawImage(img,0,0);
+        }
+        img.src = event.target.result;
+    }
+    reader.readAsDataURL(e.target.files[0]);     
 }
 
-h1 {
-  color: black;
-  font-size: 2em;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  border: 8px solid red;
-  display: inline;
+ users = [
+    {
+      "name": "First User",
+      "image": [
+        "https://ionicframework.com/img/ionic-logo-blog.png", "https://ionicframework.com/img/ionic_logo.svg", "https://ionicframework.com/img/ionic-logo-blog.png"
+      ]
+    },
+    {
+      "name": "Second User",
+      "image": [
+        "https://ionicframework.com/img/ionic-logo-blog.png", "https://ionicframework.com/img/ionic_logo.svg", "https://ionicframework.com/img/ionic-logo-blog.png"
+      ]
+    },
+    {
+      "name": "Third User",
+      "image": [
+        "https://ionicframework.com/img/ionic-logo-blog.png", "https://ionicframework.com/img/ionic_logo.svg", "https://ionicframework.com/img/ionic-logo-blog.png"
+      ]
+    },
+  ]
 
-}
-
-h2 {
-  font-size: 1.5em;
-  color: black;
-}
-
-.job-title {
-  color: black;
-  font-weight: bold;
-}
-
-a:link,
-a:visited {
-  color: red;
-}
-
-a:hover {
-  text-decoration: none;
-}
-<script>
+</script>
+       
+        </html>
 
 
 
