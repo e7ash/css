@@ -1,3 +1,10 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./app.css"/>
+    <head>
+      <body>
+        <div id="app">
+
 <h1>Eli Nicholas Ash</h1>
 <p>
   <ul>
@@ -41,6 +48,11 @@
 </div>
 
 
+
+
+
+
+<script>
 body {
   font-family: sans-serif;
   color: red;
@@ -73,4 +85,13 @@ a:visited {
 a:hover {
   text-decoration: none;
 }
+<script>
+
+
+
+
+
+
+
+
 
